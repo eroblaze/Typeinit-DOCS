@@ -1,0 +1,22 @@
+@use "../abstracts/breakpoints" as b;
+@use "../abstracts/variables" as v;
+
+body {
+  color: var(--white);
+  background-color: var(--bg-dark);
+  font-size: v.$base-size;
+  font-family: var(--ff-primary);
+}
+
+::selection {
+  color: var(--bg-dark);
+  background-color: var(--primary);
+}
+
+#__next {
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  // overflow: hidden;
+}

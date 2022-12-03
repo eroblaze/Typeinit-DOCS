@@ -1,0 +1,188 @@
+// -----------------------------------------------------------------------------
+// This file contains all @font-face declarations, if any.
+// -----------------------------------------------------------------------------
+
+/* inter-regular - latin */
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/inter/inter-v12-latin-regular.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("/fonts/inter/inter-v12-latin-regular.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("/fonts/inter/inter-v12-latin-regular.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */ url("/fonts/inter/inter-v12-latin-regular.woff")
+      format("woff"),
+    /* Modern Browsers */ url("/fonts/inter/inter-v12-latin-regular.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("/fonts/inter/inter-v12-latin-regular.svg#Inter") format("svg"); /* Legacy iOS */
+}
+/* inter-500 - latin */
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  src: url("/fonts/inter/inter-v12-latin-500.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("/fonts/inter/inter-v12-latin-500.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("/fonts/inter/inter-v12-latin-500.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("/fonts/inter/inter-v12-latin-500.woff")
+      format("woff"),
+    /* Modern Browsers */ url("/fonts/inter/inter-v12-latin-500.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */ url("/fonts/inter/inter-v12-latin-500.svg#Inter")
+      format("svg"); /* Legacy iOS */
+}
+/* inter-900 - latin */
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 900;
+  src: url("/fonts/inter/inter-v12-latin-900.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("/fonts/inter/inter-v12-latin-900.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("/fonts/inter/inter-v12-latin-900.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("/fonts/inter/inter-v12-latin-900.woff")
+      format("woff"),
+    /* Modern Browsers */ url("/fonts/inter/inter-v12-latin-900.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */ url("/fonts/inter/inter-v12-latin-900.svg#Inter")
+      format("svg"); /* Legacy iOS */
+}
+
+/* rubik-regular - latin */
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/rubik/rubik-v20-latin-regular.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("/fonts/rubik/rubik-v20-latin-regular.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("/fonts/rubik/rubik-v20-latin-regular.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */ url("/fonts/rubik/rubik-v20-latin-regular.woff")
+      format("woff"),
+    /* Modern Browsers */ url("/fonts/rubik/rubik-v20-latin-regular.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("/fonts/rubik/rubik-v20-latin-regular.svg#Rubik") format("svg"); /* Legacy iOS */
+}
+/* rubik-500 - latin */
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  src: url("/fonts/rubik/rubik-v20-latin-500.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("/fonts/rubik/rubik-v20-latin-500.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("/fonts/rubik/rubik-v20-latin-500.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("/fonts/rubik/rubik-v20-latin-500.woff")
+      format("woff"),
+    /* Modern Browsers */ url("/fonts/rubik/rubik-v20-latin-500.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */ url("/fonts/rubik/rubik-v20-latin-500.svg#Rubik")
+      format("svg"); /* Legacy iOS */
+}
+/* rubik-900 - latin */
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 900;
+  src: url("/fonts/rubik/rubik-v20-latin-900.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("/fonts/rubik/rubik-v20-latin-900.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("/fonts/rubik/rubik-v20-latin-900.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("/fonts/rubik/rubik-v20-latin-900.woff")
+      format("woff"),
+    /* Modern Browsers */ url("/fonts/rubik/rubik-v20-latin-900.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */ url("/fonts/rubik/rubik-v20-latin-900.svg#Rubik")
+      format("svg"); /* Legacy iOS */
+}
+
+/* basic - sans */
+
+@font-face {
+  font-family: "basic-sans";
+  src: url("/fonts/alaska/woff/1") format("woff"),
+    url("/fonts/alaska/opentype/1") format("opentype"),
+      url("/fonts/alaska/woff2/1") format("woff2");
+  font-display: auto;
+  font-style: italic;
+  font-weight: 900;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: "basic-sans";
+  src: url("/fonts/alaska/woff/2") format("woff"),
+    url("/fonts/alaska/opentype/2") format("opentype"),
+    url("/fonts/alaska/woff2/2") format("woff2");
+  font-display: auto;
+  font-style: normal;
+  font-weight: 900;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: "basic-sans";
+  src: url("/fonts/alaska/woff2/3") format("woff2"),
+    url("/fonts/alaska/woff/3") format("woff"),
+    url("/fonts/alaska/opentype/3") format("opentype");
+  font-display: auto;
+  font-style: italic;
+  font-weight: 600;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: "basic-sans";
+  src: url("/fonts/alaska/woff2/4") format("woff2"),
+    url("/fonts/alaska/woff/4") format("woff"),
+    url("/fonts/alaska/opentype/4") format("opentype");
+  font-display: auto;
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: "basic-sans";
+  src: url("/fonts/alaska/woff2/5") format("woff2"),
+    url("/fonts/alaska/woff/5") format("woff"),
+    url("/fonts/alaska/opentype/5") format("opentype");
+  font-display: auto;
+  font-style: italic;
+  font-weight: 400;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: "basic-sans";
+  src: url("/fonts/alaska/woff2/6") format("woff2"),
+    url("/fonts/alaska/woff/6") format("woff"),
+    url("/fonts/alaska/opentype/6") format("opentype");
+  font-display: auto;
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: "basic-sans";
+  src: url("/fonts/alaska/woff2/7") format("woff2"),
+    url("/fonts/alaska/woff/7") format("woff"),
+    url("/fonts/alaska/opentype/7") format("opentype");
+  font-display: auto;
+  font-style: normal;
+  font-weight: 300;
+  font-stretch: normal;
+}

@@ -1,0 +1,87 @@
+@use "../abstracts/functions" as f;
+@use "../abstracts/breakpoints" as b;
+
+header {
+  position: sticky;
+  top: 0;
+  backdrop-filter: saturate(180%) blur(5px);
+  background: hsla(222, 14%, 15%, 0.8);
+  padding-block: f.rem(22);
+  z-index: 10000;
+
+  // outline: 1px solid red;
+}
+
+.header {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+
+  &__logo {
+    color: var(--grey);
+    font-size: f.rem(18);
+    > span {
+      display: inline-block;
+      width: f.rem(12);
+      height: f.rem(2);
+      border-radius: 100vmax;
+      background-image: linear-gradient(
+        90deg,
+        var(--primary),
+        var(--secondary)
+      );
+      margin-inline-start: f.rem(2);
+      vertical-align: text-bottom;
+    }
+  }
+
+  &__nav {
+    // @include b.breakpoint(sm, max-width) {
+    //   position: absolute;
+    //   right: 0;
+    //   transform: translateX(100px);
+    // }
+    display: none;
+
+    @include b.breakpoint(md) {
+      display: flex;
+      gap: 4rem;
+
+      a {
+        color: var(--white);
+        font-size: f.rem(14);
+        font-weight: 500;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.hamburger {
+  --width: #{f.rem(23)};
+  min-width: auto;
+  min-height: auto;
+  color: var(--grey);
+  background-color: transparent;
+  border: none;
+  // outline: 1px solid blue;
+
+  span {
+    width: var(--width);
+    height: f.rem(2);
+    background-color: currentcolor;
+    border-radius: 100vmax;
+  }
+  span:first-child,
+  span:last-child {
+    --width: #{f.rem(17)};
+  }
+  * + span {
+    margin-top: f.rem(4);
+  }
+
+  @include b.breakpoint(md) {
+    display: none;
+  }
+}

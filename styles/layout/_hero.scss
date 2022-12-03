@@ -1,0 +1,85 @@
+@use "../abstracts/functions" as f;
+@use "../abstracts/breakpoints" as b;
+
+.hero {
+  margin-top: f.rem(100);
+  //   outline: 1px solid blue;
+  &__text {
+    user-select: none;
+    pointer-events: none;
+    font-weight: 900;
+    text-align: center;
+    line-height: 1.3;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(
+      180deg,
+      hsl(0, 0%, 100%),
+      rgba(255, 255, 255, 0.6)
+    );
+
+    @include b.breakpoint(sm) {
+      font-size: clamp(#{f.rem(32)}, 3vw + 2rem, #{f.rem(87)});
+      line-height: 1.3;
+    }
+  }
+  &__btns {
+    margin-top: f.rem(30);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: f.rem(20);
+
+    @include b.breakpoint(md) {
+      margin-top: f.rem(40);
+    }
+
+    button:last-of-type {
+      min-width: f.rem(201.594);
+      @include b.breakpoint(lg) {
+        min-width: f.rem(210.797);
+      }
+    }
+  }
+  &__background {
+    --translate: #{f.rem(122)};
+
+    position: absolute;
+    inset: 0;
+    color: var(--grey);
+    opacity: 0.02;
+    font-size: f.rem(120);
+    font-weight: 900;
+    text-align: center;
+    line-height: 1.5;
+    transform: translateY(var(--translate));
+    z-index: -1;
+    user-select: none;
+    pointer-events: none;
+
+    @include b.breakpoint(sm) {
+      transform: translateY(calc(var(--translate) + 10px));
+
+      font-size: clamp(#{f.rem(120)}, 5vw + 8rem, #{f.rem(350)});
+      line-height: 1;
+    }
+
+    @include b.breakpoint(860px) {
+      transform: translateY(var(--translate));
+
+      font-size: clamp(#{f.rem(120)}, 7vw + 10rem, #{f.rem(350)});
+    }
+  }
+
+  .br-on-md {
+    display: none;
+  }
+  @include b.breakpoint(546px) {
+    .br-on-md {
+      display: block;
+    }
+    br:not(.br-on-md) {
+      display: none;
+    }
+  }
+}

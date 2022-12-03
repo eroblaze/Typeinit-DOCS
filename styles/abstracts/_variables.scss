@@ -1,0 +1,34 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+@use "./functions" as f;
+@use "./breakpoints" as b;
+
+$base-size: 16; // in 'px' unit
+
+:root {
+  /* Colors */
+  --bg-dark: hsla(222, 14%, 15%, 1);
+  --bg-semi-dark: hsla(220, 13%, 18%, 1);
+  --primary: hsla(193, 95%, 68%, 1);
+  --secondary: hsla(50, 100%, 70%, 1);
+  --primary-hov: hsla(193, 95%, 58%, 1);
+  --secondary-hov: hsla(50, 100%, 60%, 1);
+  --gradient: linear-gradient(90deg, var(--primary) 30%, var(--secondary) 50%);
+  --white: rgb(218, 220, 221);
+  --grey: hsl(189, 41%, 97%);
+
+  /* Sizing */
+  --body-padding: 1rem;
+
+  --ff-primary: "Rubik";
+  // --ff-secondary: "Inter";
+  --ff-secondary: "basic-sans";
+
+  --margin: #{f.rem(100)};
+  --general-b-radius: #{f.rem(8)};
+
+  @include b.breakpoint(md) {
+    --margin: #{f.rem(200)};
+  }
+}

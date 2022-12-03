@@ -1,0 +1,69 @@
+@use "../abstracts/functions" as f;
+
+.btn {
+  --outline-color: currentColor;
+  color: var(--bg-semi-dark);
+  padding: f.rem(24) f.rem(64);
+  border: none;
+  border-radius: 100vmax;
+  background-color: transparent;
+  transition: 150ms background-color ease-in-out, 150ms transform ease-in-out,
+    150ms outline ease-in-out;
+
+  &:focus {
+    outline: f.rem(2) solid var(--outline-color);
+    outline-offset: f.rem(3);
+  }
+
+  &--primary {
+    --outline-color: var(--primary-hov);
+    background-color: var(--primary);
+    &:is(:hover, :focus) {
+      background-color: var(--primary-hov);
+    }
+  }
+
+  &--secondary {
+    --outline-color: var(--secondary-hov);
+    background-color: var(--secondary);
+    &:is(:hover, :focus) {
+      background-color: var(--secondary-hov);
+    }
+  }
+
+  &--gradient {
+    --outline-color: var(--grey);
+    position: relative;
+    color: var(--white);
+    overflow: hidden;
+    isolation: isolate;
+
+    &::before {
+      position: absolute;
+      content: "";
+      inset: -10rem;
+      z-index: -2;
+      background-image: var(--gradient);
+      transition: inherit;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      inset: f.rem(3);
+      z-index: -1;
+      border-radius: 100vmax;
+      background-color: var(--bg-dark);
+      transition: inherit;
+    }
+
+    &:is(:hover, :focus) {
+      &::before {
+        transform: translateX(100px);
+      }
+      &::after {
+        background-color: var(--bg-semi-dark);
+      }
+    }
+  }
+}

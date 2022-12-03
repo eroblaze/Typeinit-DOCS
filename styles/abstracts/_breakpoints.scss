@@ -1,0 +1,30 @@
+@use "sass:map";
+
+$breakpoints: (
+  "xs": 0px,
+  "sm": 30.0625em,
+  // 481px
+  "md": 45.0625em,
+  // 721px
+  "lg": 60.0625em,
+  // 961px
+  "xl": 75.0625em // 1201px,,,,,,
+);
+
+@mixin breakpoint($bp, $w: min-width) {
+  $value: map.get($breakpoints, $bp);
+
+  @if $value == null {
+    @media ($w: $bp) {
+      @content;
+    }
+  } @else {
+    @if $w == max-width {
+      // Subtract 1px from the bp
+      $value: $value - 0.0625em;
+    }
+    @media ($w: $value) {
+      @content;
+    }
+  }
+}
