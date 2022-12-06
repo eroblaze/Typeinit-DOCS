@@ -38,6 +38,8 @@ body {
   line-height: 1.6;
   text-rendering: optimizeSpeed;
   -webkit-font-smoothing: antialiased;
+  // To prevent blue flashes when elements are clicked on mobile
+  -webkit-tap-highlight-color: transparent;
 }
 
 /* A elements that don't have a class get default styles */

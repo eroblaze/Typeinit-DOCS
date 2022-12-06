@@ -51,25 +51,25 @@
   flex-direction: column;
   gap: var(--margin);
   &__div {
-    display: flex;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(0, 1fr);
     align-items: center;
-    justify-content: space-between;
-    // flex-wrap: wrap;
+
     gap: f.rem(20);
-    > * {
-      flex: 1;
-    }
 
     @include b.breakpoint(600px, max-width) {
-      flex-direction: column !important;
+      grid-auto-flow: row !important;
       align-items: flex-start;
       gap: f.rem(50);
     }
   }
 
   &__div:nth-of-type(2) {
-    flex-direction: row-reverse;
     p {
+      @include b.breakpoint(601px) {
+        grid-column: 2 / 3;
+      }
       @include b.breakpoint(600px) {
         text-align: end;
       }
@@ -85,11 +85,19 @@
   &__box {
     width: 100%;
     max-width: f.rem(480);
+
+    > button {
+      margin-top: f.rem(44);
+    }
     &__rect {
-      min-height: f.rem(200);
-      background-color: var(--bg-semi-dark);
-      border-radius: var(--general-b-radius);
-      margin-bottom: f.rem(44);
+      display: block;
+      // min-height: f.rem(200);
+      height: fit-content;
+      max-width: calc(100vw - var(--body-padding) * 2);
+
+      background-color: var(--bg-semi-dark) !important;
+      border-radius: var(--general-b-radius) !important;
+      margin: 0 !important;
 
       box-shadow: 0px 0px 100px 50px rgba(96, 217, 251, 0.1);
 
@@ -97,5 +105,30 @@
         box-shadow: 0px 0px 100px 50px rgba(255, 230, 102, 0.1);
       }
     }
+
+    &__result {
+      position: relative;
+      border: 1px solid var(--white);
+      min-height: f.rem(40);
+      border-radius: var(--general-b-radius);
+      background-color: var(--bg-dark);
+      padding: var(--body-padding);
+      margin-top: f.rem(20);
+      transform: translateY(-150%);
+      opacity: 0;
+      z-index: -1;
+      overflow: auto;
+    }
+  }
+}
+
+.display__box__result__two {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  > div:last-of-type {
+    border-radius: 100%;
+    animation: changeBackground 3s linear infinite;
+    height: f.rem(20);
+    width: f.rem(20);
   }
 }
