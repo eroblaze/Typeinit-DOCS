@@ -6,6 +6,7 @@ let clicked = false;
 const Header = () => {
   const hamburgerRef = useRef<HTMLButtonElement>(null);
   const menuTlRef = useRef<gsap.core.Timeline>();
+  const menuRef = useRef<HTMLUListElement>(null);
 
   useEffect(() => {
     menuTlRef.current = gsap
@@ -35,11 +36,19 @@ const Header = () => {
   const handleMenuClicked = () => {
     switch (clicked) {
       case false:
-        menuTlRef.current?.timeScale(2).play();
+        menuTlRef.current?.timeScale(4).play();
+        if (menuRef.current) {
+          menuRef.current.classList.remove("slide-out");
+          menuRef.current.classList.add("slide-in");
+        }
         clicked = true;
         break;
       default:
         menuTlRef.current?.reverse();
+        if (menuRef.current) {
+          menuRef.current.classList.remove("slide-in");
+          menuRef.current.classList.add("slide-out");
+        }
         clicked = false;
     }
   };
@@ -51,7 +60,12 @@ const Header = () => {
           <p className="header__logo" aria-label="Logo">
             typeinit<span></span>
           </p>
-          <ul role="list" className="header__nav" id="header__nav">
+          <ul
+            ref={menuRef}
+            role="list"
+            className="header__nav"
+            id="header__nav"
+          >
             <li>
               <a href="javascript:;">Github</a>
             </li>

@@ -2,7 +2,9 @@
 @use "../abstracts/breakpoints" as b;
 
 .hero {
-  margin-top: f.rem(100);
+  --header-height: 72.8px;
+
+  margin-top: calc(#{f.rem(100)} + var(--header-height));
   //   outline: 1px solid blue;
   &__text {
     user-select: none;

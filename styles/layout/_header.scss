@@ -2,8 +2,8 @@
 @use "../abstracts/breakpoints" as b;
 
 header {
-  position: sticky;
-  top: 0;
+  position: fixed;
+  inset: 0 0 auto 0;
   backdrop-filter: saturate(180%) blur(5px);
   background: hsla(222, 14%, 15%, 0.8);
   padding-block: f.rem(22);
@@ -42,18 +42,35 @@ header {
     //   right: 0;
     //   transform: translateX(100px);
     // }
-    display: none;
+    display: flex;
 
-    @include b.breakpoint(md) {
-      display: flex;
-      gap: 4rem;
+    a {
+      color: var(--white);
+      font-size: f.rem(14);
+      font-weight: 500;
+      text-decoration: none;
+    }
+    @include b.breakpoint(md, max-width) {
+      position: fixed;
+      flex-direction: column;
+      align-items: center;
+      gap: f.rem(30);
+      padding-block-start: f.rem(80);
+      background: hsla(220, 13%, 18%, 0.98);
+      inset: 0;
+      left: 10%;
+      min-height: 100vh;
+      backdrop-filter: saturate(180%) blur(5px);
+      transform: translateX(100vw);
+      transition: transform 350ms linear;
 
       a {
-        color: var(--white);
-        font-size: f.rem(14);
-        font-weight: 500;
-        text-decoration: none;
+        font-size: f.rem(16);
       }
+    }
+
+    @include b.breakpoint(md) {
+      gap: 4rem;
     }
   }
 }
@@ -65,6 +82,7 @@ header {
   color: var(--grey);
   background-color: transparent;
   border: none;
+  z-index: 2;
   // outline: 1px solid blue;
 
   span {
@@ -83,5 +101,17 @@ header {
 
   @include b.breakpoint(md) {
     display: none;
+  }
+}
+
+.slide-in {
+  @include b.breakpoint(md, max-width) {
+    transform: translateX(0);
+  }
+}
+
+.slide-out {
+  @include b.breakpoint(md, max-width) {
+    transform: translateX(100vw);
   }
 }
