@@ -5,7 +5,7 @@ const BasicFeatures = () => {
   return (
     <main className="container docs">
       <SideNav />
-      <div className="h1">Basic Features</div>
+      <div className="h1">Page Basic Features</div>
     </main>
   );
 };

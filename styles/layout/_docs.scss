@@ -37,6 +37,61 @@ ol {
 .docs {
   // border: 1px solid red;
 
+  // This is the details section of the doc
+  > section {
+    padding-inline-end: var(--body-padding);
+
+    @include b.breakpoint(#{f.rem(1025)}) {
+      padding-inline-end: 0;
+    }
+
+    @include b.breakpoint(md, max-width) {
+      padding: f.rem(20) var(--body-padding);
+    }
+    ::marker {
+      color: var(--primary);
+    }
+  }
+
+  pre {
+    box-shadow: none;
+    margin-block: f.rem(20) !important;
+  }
+
+  code:not([class^="language-"]) {
+    display: inline-block;
+    font-size: 1rem;
+    border-radius: f.rem(2);
+    background-color: var(--dark-grey);
+    padding-inline: f.rem(3);
+    // transform: translateY(-2px);
+  }
+
+  &__title {
+    color: var(--white);
+    margin-bottom: f.rem(20);
+    @include b.breakpoint(md) {
+      margin-bottom: f.rem(30);
+    }
+  }
+
+  &__subtitle {
+    margin-block: f.rem(20);
+    @include b.breakpoint(md) {
+      margin-block: f.rem(30);
+    }
+  }
+
+  &__ultra__subtitle {
+    display: inline-block;
+    font-weight: 600;
+
+    margin-block: f.rem(20);
+    @include b.breakpoint(md) {
+      margin-block: f.rem(30);
+    }
+  }
+
   @include b.breakpoint(#{f.rem(1024)}, max-width) {
     padding-inline: 0;
   }
@@ -58,6 +113,7 @@ ol {
 
   @include b.breakpoint(md) {
     height: calc(100vh - var(--header-height));
+    padding-block-start: f.rem(50);
     // outline: 1px solid red;
   }
 }
@@ -71,6 +127,8 @@ ol {
 .sidenav {
   --spacing: #{f.rem(5)};
   --gap: #{f.rem(15)};
+
+  color: var(--grey);
 
   font-size: f.rem(16);
 
@@ -100,8 +158,6 @@ ol {
     background: var(--bg-dark);
   }
 
-  color: var(--grey);
-
   li {
     cursor: pointer;
     transition: 150ms color linear;
@@ -113,14 +169,6 @@ ol {
 
   li:not(:last-child) {
     margin-bottom: var(--gap);
-  }
-
-  &__title {
-    color: var(--white);
-    margin-bottom: f.rem(20);
-    @include b.breakpoint(md) {
-      margin-bottom: f.rem(30);
-    }
   }
 
   &__menu {

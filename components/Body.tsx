@@ -275,14 +275,16 @@ const Body = () => {
             <div className="display__box">
               <div className="display__container__three">
                 {/* prettier-ignore */}
-                <pre className="scrollbar display__box__rect language-javascript">
-                <code className="language-javascript">
-                 {`// html
+                <pre className="scrollbar display__box__rect language-html">
+                <code className="language-html">
+                 {`<!-- html -->
 <div id="element">Foo Bar Baz</div>
 
-// js
-new Typeinit("#element")
-  .play()`}
+<!-- js -->
+<script>
+  new Typeinit("#element")
+    .play()
+</script>`}
                 </code>
               </pre>
               </div>

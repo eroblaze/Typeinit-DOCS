@@ -69,7 +69,7 @@ header {
       min-height: 100vh;
       backdrop-filter: saturate(180%) blur(5px);
       transform: translateX(100vw);
-      transition: transform 250ms linear;
+      transition: transform 150ms linear;
 
       a {
         font-size: f.rem(16);

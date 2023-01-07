@@ -11,7 +11,7 @@ const Footer = () => {
           height={18}
           alt="Copyright icon"
         ></Image>
-        <p>2022</p>
+        <p>2023</p>
       </span>
       <div aria-hidden="true"></div>
       <p>designed & created by Paul Eboselume</p>

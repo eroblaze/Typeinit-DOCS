@@ -19,6 +19,9 @@
 .small {
   font-size: f.rem(14);
 }
+.medium {
+  font-size: f.rem(16);
+}
 
 .scrollbar {
   &::-webkit-scrollbar {
@@ -42,6 +45,13 @@
   }
 }
 
+.mb-10 {
+  margin-block-end: f.rem(10);
+}
+
+.cl-grey {
+  color: var(--grey);
+}
 // Hides content and makes it only available to screen readers.
 .sr-only {
   position: absolute;

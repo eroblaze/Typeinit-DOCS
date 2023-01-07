@@ -1,0 +1,13 @@
+@use "../abstracts/functions" as f;
+@use "../abstracts/breakpoints" as b;
+
+.getting-started {
+  //   border: 1px solid red;
+
+  &__first__li {
+    display: grid;
+  }
+  .rm-margin-top {
+    margin-block-start: 0;
+  }
+}

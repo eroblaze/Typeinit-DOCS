@@ -32,10 +32,14 @@ body {
 
 #__next {
   width: 100%;
-  min-height: 300vh;
+  min-height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr auto;
   // grid-template-rows: 1fr auto; // Because of the fixed position of the header
   overflow: clip;
   // overflow: hidden;
+}
+
+code {
+  font-family: monospace !important;
 }

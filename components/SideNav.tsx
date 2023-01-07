@@ -15,7 +15,7 @@ const SideNav = () => {
   };
 
   return (
-    <section className="sticky__sidenav" ref={stickySidenavRef}>
+    <aside className="sticky__sidenav" ref={stickySidenavRef}>
       <div className="clickable sidenav__mobile__menu" onClick={handleClick}>
         <svg
           ref={menuArrowRef}
@@ -34,8 +34,8 @@ const SideNav = () => {
         <span>Menu</span>{" "}
       </div>
 
-      <aside className="scrollbar sidenav">
-        <h4 className="h4 sidenav__title">Documentation</h4>
+      <div className="scrollbar sidenav">
+        <h4 className="h4 docs__title">Documentation</h4>
 
         <div className="sidenav__menu">
           <ul>
@@ -103,8 +103,8 @@ const SideNav = () => {
             </nav>
           </details>
         </div>
-      </aside>
-    </section>
+      </div>
+    </aside>
   );
 };
 
