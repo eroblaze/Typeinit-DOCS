@@ -20,6 +20,28 @@
   font-size: f.rem(14);
 }
 
+.scrollbar {
+  &::-webkit-scrollbar {
+    width: f.rem(10);
+    @include b.breakpoint(sm, max-width) {
+      width: f.rem(7);
+    }
+  }
+
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 f.rem(2) var(--grey);
+    border-radius: f.rem(10);
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--bg-semi-dark);
+    border-radius: f.rem(10);
+    box-shadow: inset 0 0 f.rem(8) var(--white);
+  }
+  &::-webkit-scrollbar-corner {
+    display: none;
+  }
+}
+
 // Hides content and makes it only available to screen readers.
 .sr-only {
   position: absolute;

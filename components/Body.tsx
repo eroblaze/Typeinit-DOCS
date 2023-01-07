@@ -220,7 +220,7 @@ const Body = () => {
             <div className="display__box">
               <div className="display__container__one">
                 {/* prettier-ignore */}
-                <pre className="display__box__rect language-javascript">
+                <pre className="scrollbar display__box__rect language-javascript">
                 <code className="language-javascript">
                  {`new Typeinit(".element")
   .type("Hello World!")
@@ -246,7 +246,7 @@ const Body = () => {
             <div className="display__box">
               <div className="display__container__two">
                 {/* prettier-ignore */}
-                <pre className="display__box__rect language-javascript display__box__rect--secondary">
+                <pre className="scrollbar display__box__rect language-javascript display__box__rect--secondary">
                 <code className="language-javascript">
                  {`new Typeinit(".element", {
       onStart: () => {
@@ -275,7 +275,7 @@ const Body = () => {
             <div className="display__box">
               <div className="display__container__three">
                 {/* prettier-ignore */}
-                <pre className="display__box__rect language-javascript">
+                <pre className="scrollbar display__box__rect language-javascript">
                 <code className="language-javascript">
                  {`// html
 <div id="element">Foo Bar Baz</div>

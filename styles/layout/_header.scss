@@ -2,12 +2,14 @@
 @use "../abstracts/breakpoints" as b;
 
 header {
-  position: fixed;
+  // position: fixed;
+  position: sticky;
   inset: 0 0 auto 0;
   backdrop-filter: saturate(180%) blur(5px);
   background: hsla(222, 14%, 15%, 0.8);
   padding-block: f.rem(22);
   z-index: 10000;
+  border-bottom: 1px solid var(--dark-grey);
 
   // outline: 1px solid red;
 }
@@ -49,6 +51,11 @@ header {
       font-size: f.rem(14);
       font-weight: 500;
       text-decoration: none;
+      transition: color 150ms linear;
+
+      &:hover {
+        color: var(--primary);
+      }
     }
     @include b.breakpoint(md, max-width) {
       position: fixed;
@@ -62,7 +69,7 @@ header {
       min-height: 100vh;
       backdrop-filter: saturate(180%) blur(5px);
       transform: translateX(100vw);
-      transition: transform 350ms linear;
+      transition: transform 250ms linear;
 
       a {
         font-size: f.rem(16);

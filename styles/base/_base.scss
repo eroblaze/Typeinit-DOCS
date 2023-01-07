@@ -1,10 +1,24 @@
 @use "../abstracts/breakpoints" as b;
 @use "../abstracts/variables" as v;
+@use "../abstracts/functions" as f;
 
 body {
   color: var(--white);
   background-color: var(--bg-dark);
   font-family: var(--ff-primary);
+
+  &::-webkit-scrollbar {
+    width: f.rem(12);
+  }
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 f.rem(2) var(--grey);
+    border-radius: f.rem(10);
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--bg-semi-dark);
+    border-radius: f.rem(10);
+    box-shadow: inset 0 0 f.rem(8) var(--white);
+  }
 }
 
 ::selection {
@@ -12,11 +26,16 @@ body {
   background-color: var(--primary);
 }
 
+::marker {
+  color: currentColor;
+}
+
 #__next {
   width: 100%;
-  min-height: 100vh;
+  min-height: 300vh;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  // overflow: clip;
-  overflow: hidden;
+  // grid-template-rows: 1fr auto; // Because of the fixed position of the header
+  overflow: clip;
+  // overflow: hidden;
 }

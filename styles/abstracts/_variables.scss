@@ -16,7 +16,8 @@ $base-size: 16; // in 'px' unit
   --secondary-hov: hsla(50, 100%, 60%, 1);
   --gradient: linear-gradient(90deg, var(--primary) 30%, var(--secondary) 50%);
   --white: rgb(218, 220, 221);
-  --grey: hsl(189, 41%, 97%);
+  --grey: hsl(193, 5%, 64%);
+  --dark-grey: hsl(224, 13%, 23%);
 
   /* Sizing */
   --body-padding: 1rem;
@@ -31,4 +32,6 @@ $base-size: 16; // in 'px' unit
   @include b.breakpoint(md) {
     --margin: #{f.rem(200)};
   }
+
+  --header-height: 72.8px;
 }

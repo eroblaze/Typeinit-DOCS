@@ -3,10 +3,13 @@
 
 footer {
   --space: #{f.rem(4)};
+
+  margin-block-start: var(--margin);
+
   @include b.breakpoint(md) {
     --space: #{f.rem(20)};
   }
-  //   border: 1px solid red;
+  // border: 1px solid blue;
   display: flex;
   justify-content: center;
   text-align: center;

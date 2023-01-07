@@ -2,11 +2,11 @@
 @use "../abstracts/breakpoints" as b;
 
 .body {
-  margin-block-end: var(--margin);
+  // margin-block-end: var(--margin);
+  // border: 1px solid blue;
 }
 
 .main__section {
-  //   border: 1px solid blue;
   display: flex;
   flex-direction: column;
   gap: var(--margin);
