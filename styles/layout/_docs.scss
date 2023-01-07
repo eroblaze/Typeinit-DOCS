@@ -20,8 +20,8 @@ ol {
   }
 
   > svg {
-    transform: rotate(-90deg) translateY(var(--translate, -3px));
-    transition: 150ms transform linear;
+    transform: rotate(-90deg);
+    transition: 150ms transform;
     path {
       fill: currentColor;
     }
@@ -29,7 +29,7 @@ ol {
 }
 
 .rotate-arrow {
-  transform: rotate(0deg) translateX(var(--translate, -3px)) !important;
+  transform: rotate(0deg) !important;
 }
 
 /* end shared styles*/
@@ -47,7 +47,7 @@ ol {
     gap: f.rem(30);
 
     > * {
-      padding-block-start: f.rem(20);
+      padding-block-start: f.rem(44);
     }
   }
 }
@@ -71,14 +71,19 @@ ol {
 .sidenav {
   --spacing: #{f.rem(5)};
   --gap: #{f.rem(15)};
-  --translate: -3px;
+
+  font-size: f.rem(16);
 
   // border: 1px solid red;
   padding-inline: var(--body-padding);
 
   overflow-y: auto;
 
+  @include b.breakpoint(#{f.rem(1025)}) {
+    padding-inline: 0;
+  }
   @include b.breakpoint(md) {
+    padding-bottom: f.rem(16);
     height: calc(100vh - var(--header-height));
     scrollbar-gutter: stable;
   }
@@ -113,9 +118,8 @@ ol {
   &__title {
     color: var(--white);
     margin-bottom: f.rem(20);
-
-    @include b.breakpoint(#{f.rem(1025)}) {
-      transform: translateX(calc(-1 * var(--body-padding)));
+    @include b.breakpoint(md) {
+      margin-bottom: f.rem(30);
     }
   }
 
@@ -140,17 +144,16 @@ ol {
       }
     }
     & > nav {
+      width: fit-content;
       border-left: 1px solid var(--grey);
       padding-left: calc(#{f.rem(17)} + var(--spacing));
-      transform: translateX(3px);
+      transform: translateX(5px);
       margin: f.rem(19) 0 var(--gap) 0;
     }
   }
 }
 
 .sidenav__mobile__menu {
-  --translate: 0px;
-
   @include b.breakpoint(md) {
     display: none;
   }

@@ -20,7 +20,7 @@ const SideNav = () => {
         <svg
           ref={menuArrowRef}
           width="12"
-          height="12"
+          height="8"
           aria-label="summary marker"
           viewBox="0 0 12 8"
           fill="none"
@@ -47,7 +47,7 @@ const SideNav = () => {
             <summary className="clickable">
               <svg
                 width="12"
-                height="12"
+                height="8"
                 aria-label="summary marker"
                 viewBox="0 0 12 8"
                 fill="none"
@@ -76,7 +76,7 @@ const SideNav = () => {
             <summary className="clickable">
               <svg
                 width="12"
-                height="12"
+                height="8"
                 aria-label="summary marker"
                 viewBox="0 0 12 8"
                 fill="none"
