@@ -21,9 +21,8 @@ header {
   align-items: center;
 
   &__logo {
-    color: var(--grey);
     font-size: f.rem(18);
-    > span {
+    span {
       display: inline-block;
       width: f.rem(12);
       height: f.rem(2);
@@ -86,7 +85,7 @@ header {
   --width: #{f.rem(23)};
   min-width: auto;
   min-height: auto;
-  color: var(--grey);
+  color: var(--white);
   background-color: transparent;
   border: none;
   z-index: 2;

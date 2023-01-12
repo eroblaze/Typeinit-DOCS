@@ -2,6 +2,18 @@
 @use "../abstracts/variables" as v;
 @use "../abstracts/functions" as f;
 
+html {
+  scroll-padding-top: calc(
+    var(--header-height) + var(--docs-section-padding-block-start)
+  );
+
+  @include b.breakpoint(md, max-width) {
+    scroll-padding-top: calc(
+      var(--header-height) + (var(--docs-section-padding-block-start) * 2.4)
+    );
+  }
+}
+
 body {
   color: var(--white);
   background-color: var(--bg-dark);
@@ -40,6 +52,20 @@ body {
   // overflow: hidden;
 }
 
-code {
-  font-family: monospace !important;
+table {
+  border-collapse: collapse;
+  td,
+  th {
+    padding: 1rem;
+    border: 1px solid var(--dark-grey);
+    min-width: f.rem(245);
+  }
+  th {
+    text-align: left;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }

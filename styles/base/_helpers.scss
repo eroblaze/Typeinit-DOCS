@@ -22,6 +22,65 @@
 .medium {
   font-size: f.rem(16);
 }
+.d-grid {
+  display: grid;
+}
+.rm-margin-top {
+  margin-block-start: 0 !important;
+}
+.rm-margin-bottom {
+  margin-bottom: 0 !important;
+}
+
+.fw-semi-bold {
+  font-weight: 600;
+}
+
+.overflow-auto {
+  overflow: auto;
+  @include b.breakpoint(md, max-width) {
+    width: calc(100vw - (var(--body-padding) * 2));
+  }
+}
+
+.warning {
+  background-color: hsla(50, 100%, 70%, 0.1);
+  border: 1px solid var(--secondary);
+  border-radius: var(--general-b-radius);
+  padding: f.rem(8);
+  font-size: f.rem(16);
+  margin-bottom: f.rem(24);
+
+  &__title {
+    display: block;
+    color: var(--primary);
+  }
+}
+
+.active-nav-link {
+  color: var(--primary) !important;
+}
+.active-sidebar-link {
+  color: var(--white) !important;
+}
+
+.mt-10 {
+  margin-block-start: f.rem(10);
+}
+.mb-10 {
+  margin-block-end: f.rem(10);
+}
+.mt-24 {
+  margin-top: f.rem(24);
+}
+
+.cl-grey {
+  color: var(--grey);
+}
+
+.cl-primary {
+  color: var(--primary);
+}
 
 .scrollbar {
   &::-webkit-scrollbar {
@@ -45,13 +104,6 @@
   }
 }
 
-.mb-10 {
-  margin-block-end: f.rem(10);
-}
-
-.cl-grey {
-  color: var(--grey);
-}
 // Hides content and makes it only available to screen readers.
 .sr-only {
   position: absolute;

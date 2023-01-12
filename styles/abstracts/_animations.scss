@@ -14,11 +14,3 @@
     opacity: 0.02;
   }
 }
-@keyframes changeBackground {
-  0% {
-    background-color: var(--primary);
-  }
-  100% {
-    background-color: var(--secondary);
-  }
-}

@@ -2,6 +2,15 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-}
+  redirects: async () => {
+    return [
+      {
+        source: "/docs",
+        destination: "/docs/getting-started",
+        permanent: true,
+      },
+    ];
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

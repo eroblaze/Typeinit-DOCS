@@ -1,8 +1,27 @@
-import Image from "next/image";
-import Prism from "prismjs";
-import Typeinit from "typeinit";
-import gsap from "gsap";
 import { MouseEvent, useEffect, useRef } from "react";
+
+import Head from "next/head";
+import Link from "next/link";
+import Image from "next/image";
+
+import Prism from "prismjs";
+import gsap from "gsap";
+import { Fade } from "react-awesome-reveal";
+
+import Typeinit from "typeinit";
+
+const colors = [
+  "red",
+  "purple",
+  "yellow",
+  "brown",
+  "pink",
+  "blue",
+  "green",
+  "magenta",
+  "orange",
+  "lime",
+];
 
 const Body = () => {
   const firstDisplayTypeinitRef = useRef<Typeinit | null>(null);
@@ -14,13 +33,17 @@ const Body = () => {
     Prism.highlightAll();
   }, []);
 
+  const getRandomColor = () => {
+    const color = colors[Math.floor(Math.random() * colors.length)];
+    return color;
+  };
+
   const handleRunBtn = (
     e: MouseEvent<HTMLButtonElement, globalThis.MouseEvent>,
     whichToDisplay: number
   ) => {
-    const { target } = e;
+    const target = e.target as HTMLButtonElement;
     const { textContent } = target;
-    console.log("hey", textContent);
 
     if (textContent === "Run") {
       if (whichToDisplay === 1) {
@@ -49,10 +72,8 @@ const Body = () => {
         myDiv.classList.add("display__box__result", theClass);
 
         const firstDiv = document.createElement("div");
-        const secondDiv = document.createElement("div");
 
         myDiv.appendChild(firstDiv);
-        myDiv.appendChild(secondDiv);
 
         document.querySelector(".display__container__two")?.appendChild(myDiv);
 
@@ -63,39 +84,17 @@ const Body = () => {
         });
         target.textContent = "Reset";
 
-        secondDisplayTypeinitRef.current = new Typeinit(
-          `.${theClass}>div:first-of-type`,
-          {
-            startDelay: 300,
-            caretColor: "var(--secondary)",
-            typingSpeed: 200,
-            // onStart: () => {
-            //   gsapTl.current = gsap
-            //     .timeline({ repeat: -1, yoyo: true })
-            //     .to(`.${theClass}>div:first-of-type`, { duration: 1, scale: 2 })
-            //     .to(`.${theClass}>div:first-of-type`, {
-            //       duration: 1,
-            //       scale: 0.5,
-            //     })
-            //     .play();
-            // },
-            onCharTyped: () => {
-              const howManySpans = document.querySelector(
-                `.${theClass}>div:first-of-type`
-              )?.childElementCount!;
-              gsap.to(`.${theClass}>div:last-of-type`, {
-                duration: 1,
-                x: "+=10",
-              });
-              // gsap.to(
-              //   `.${theClass}>div:first-of-type>span:nth-child(${
-              //     howManySpans - 1
-              //   })`,
-              //   { duration: 1, color: "red" }
-              // );
-            },
-          }
-        ).type("Hello World!");
+        secondDisplayTypeinitRef.current = new Typeinit(`.${theClass}>div`, {
+          startDelay: 300,
+          caretColor: "var(--secondary)",
+
+          onCharTyped: () => {
+            gsap.set(`.${theClass}`, {
+              // duration: 1,
+              borderColor: getRandomColor,
+            });
+          },
+        }).type("I can work with GSAP 💪");
         secondDisplayTypeinitRef.current.play();
       } else if (whichToDisplay === 3) {
         const theClass = "display__box__result__three";
@@ -137,6 +136,10 @@ const Body = () => {
 
   return (
     <main className="container body">
+      <Head>
+        <title>Typeinit</title>
+      </Head>
+
       <section className="hero">
         <p className="h1 hero__background" aria-hidden="true">
           typeinit
@@ -148,8 +151,12 @@ const Body = () => {
           Animation Library.
         </h1>
         <div className="hero__btns">
-          <button className="btn btn--primary">view docs</button>
-          <button className="btn btn--gradient">github</button>
+          <Link href="/docs/getting-started">
+            <button className="btn btn--primary">view docs</button>
+          </Link>
+          <Link href="https://github.com/eroblaze/typeinit" target="_blank">
+            <button className="btn btn--gradient">github</button>
+          </Link>
         </div>
       </section>
 
@@ -159,123 +166,141 @@ const Body = () => {
             Why Typeinit?
           </p>
 
-          <div className="cards__card">
-            <div className="cards__title">
-              <Image
-                src="/icons/easy-to-use.svg"
-                width={23}
-                height={23}
-                alt="Easy to use"
-              />
-              <p className="h4">Easy to use</p>
+          <Fade direction="up" triggerOnce={true}>
+            <div className="cards__card">
+              <div className="cards__title">
+                <Image
+                  src="/icons/easy-to-use.svg"
+                  width={23}
+                  height={23}
+                  alt="Easy to use"
+                />
+                <p className="h4">Easy to use</p>
+              </div>
+              <p className="cards__text">
+                Offers an intuitive and chainable API for ease of use.
+              </p>
             </div>
-            <p className="cards__text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque,
-              iusto.
-            </p>
-          </div>
-          <div className="cards__card">
-            <div className="cards__title">
-              <Image
-                src="/icons/flexible.svg"
-                width={23}
-                height={23}
-                alt="Flexible"
-              />
-              <p className="h4">Flexible</p>
+          </Fade>
+          <Fade direction="up" triggerOnce={true}>
+            <div className="cards__card">
+              <div className="cards__title">
+                <Image
+                  src="/icons/flexible.svg"
+                  width={23}
+                  height={23}
+                  alt="Flexible"
+                />
+                <p className="h4">Flexible</p>
+              </div>
+              <p className="cards__text">
+                Customize and adjust the default settings as you wish.
+              </p>
             </div>
-            <p className="cards__text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint sed,
-              quod repellat ad beatae eum possimus vero! Necessitatibus, cumque
-              doloribus?
-            </p>
-          </div>
-          <div className="cards__card">
-            <div className="cards__title">
-              <Image
-                src="/icons/seo-friendly.svg"
-                width={23}
-                height={23}
-                alt="SEO-friendly"
-              />
-              <p className="h4">SEO-friendly</p>
+          </Fade>
+          <Fade direction="up" triggerOnce={true}>
+            <div className="cards__card">
+              <div className="cards__title">
+                <Image
+                  src="/icons/seo-friendly.svg"
+                  width={23}
+                  height={23}
+                  alt="SEO-friendly"
+                />
+                <p className="h4">SEO-friendly</p>
+              </div>
+              <p className="cards__text">
+                Define strings to type directly in the HTML.
+              </p>
             </div>
-            <p className="cards__text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque,
-              iusto.
-            </p>
-          </div>
+          </Fade>
         </section>
+
         <section className="display" aria-details="#display">
           <p className="sr-only" id="display">
             Most popular features of Typeinit
           </p>
 
           <div className="display__div">
-            <p className="h3 display__text">
-              Create an animation <br />
-              with just three lines of <br />
-              code
-            </p>
-            <div className="display__box">
-              <div className="display__container__one">
-                {/* prettier-ignore */}
-                <pre className="scrollbar display__box__rect language-javascript">
+            <Fade direction="left" triggerOnce={true}>
+              <p className="h3 display__text">
+                Create an animation <br />
+                with just three lines of <br />
+                code
+              </p>
+            </Fade>
+
+            <Fade direction="right" triggerOnce={true}>
+              <div className="display__box">
+                <div className="display__container__one">
+                  {/* prettier-ignore */}
+                  <pre className="scrollbar display__box__rect language-javascript">
                 <code className="language-javascript">
                  {`new Typeinit(".element")
   .type("Hello World!")
   .play()`}
                 </code>
               </pre>
-              </div>
+                </div>
 
-              <button
-                className="btn btn--secondary"
-                onClick={(e) => handleRunBtn(e, 1)}
-              >
-                Run
-              </button>
-            </div>
+                <button
+                  className="btn btn--secondary"
+                  onClick={(e) => handleRunBtn(e, 1)}
+                >
+                  Run
+                </button>
+              </div>
+            </Fade>
           </div>
+
           <div className="display__div">
-            <p className="h3 display__text">
-              Combine with your <br />
-              favourite JavaScript <br />
-              animation library
-            </p>
-            <div className="display__box">
-              <div className="display__container__two">
-                {/* prettier-ignore */}
-                <pre className="scrollbar display__box__rect language-javascript display__box__rect--secondary">
+            <Fade direction="right" triggerOnce={true}>
+              <p className="h3 display__text">
+                Combine with your <br />
+                favourite JavaScript <br />
+                animation library
+              </p>
+            </Fade>
+
+            <Fade direction="left" triggerOnce={true}>
+              <div className="display__box">
+                <div className="display__container__two">
+                  {/* prettier-ignore */}
+                  <pre className="scrollbar display__box__rect language-javascript display__box__rect--secondary">
                 <code className="language-javascript">
                  {`new Typeinit(".element", {
-      onStart: () => {
-          gsap.to(".another", {duration: 2, x: 45})
+      onCharTyped: () => {
+          gsap.set(".parentEl", {borderColor: getRandomColor})
       }})
-  .type("Yayy")
+  .type("I can work with GSAP 💪")
   .play()`}
                 </code>
               </pre>
-              </div>
+                </div>
 
-              <button
-                className="btn btn--secondary"
-                onClick={(e) => handleRunBtn(e, 2)}
-              >
-                Run
-              </button>
-            </div>
+                <button
+                  className="btn btn--secondary"
+                  onClick={(e) => handleRunBtn(e, 2)}
+                >
+                  Run
+                </button>
+              </div>
+            </Fade>
           </div>
+
           <div className="display__div">
-            <p className="h3 display__text">
-              Define the strings to <br />
-              type directly in your <br />
-              html
-            </p>
-            <div className="display__box">
-              <div className="display__container__three">
-                {/* prettier-ignore */}
-                <pre className="scrollbar display__box__rect language-html">
+            <Fade direction="left" triggerOnce={true}>
+              <p className="h3 display__text">
+                Define the strings to <br />
+                type directly in your <br />
+                html
+              </p>
+            </Fade>
+            <Fade direction="right" triggerOnce={true}>
+              <div className="display__box">
+                <div className="display__container__three">
+                  {/* prettier-ignore */}
+                  <pre className="scrollbar display__box__rect language-html">
                 <code className="language-html">
                  {`<!-- html -->
 <div id="element">Foo Bar Baz</div>
@@ -287,15 +312,16 @@ const Body = () => {
 </script>`}
                 </code>
               </pre>
-              </div>
+                </div>
 
-              <button
-                className="btn btn--secondary"
-                onClick={(e) => handleRunBtn(e, 3)}
-              >
-                Run
-              </button>
-            </div>
+                <button
+                  className="btn btn--secondary"
+                  onClick={(e) => handleRunBtn(e, 3)}
+                >
+                  Run
+                </button>
+              </div>
+            </Fade>
           </div>
         </section>
       </section>

@@ -1,0 +1,12 @@
+@use "../abstracts/functions" as f;
+
+.playground {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: f.rem(100);
+
+  h1 {
+    font-size: f.rem(48);
+  }
+}

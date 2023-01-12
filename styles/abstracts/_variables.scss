@@ -18,16 +18,19 @@ $base-size: 16; // in 'px' unit
   --white: rgb(218, 220, 221);
   --grey: hsl(193, 5%, 64%);
   --dark-grey: hsl(224, 13%, 23%);
+  --former-grey: hsl(189, 41%, 97%);
 
   /* Sizing */
   --body-padding: 1rem;
 
+  /* Fonts */
   --ff-primary: "Rubik";
-  // --ff-secondary: "Inter";
   --ff-secondary: "basic-sans";
 
   --margin: #{f.rem(100)};
   --general-b-radius: #{f.rem(8)};
+
+  --docs-section-padding-block-start: #{f.rem(44)};
 
   @include b.breakpoint(md) {
     --margin: #{f.rem(200)};

@@ -46,7 +46,7 @@ ol {
     }
 
     @include b.breakpoint(md, max-width) {
-      padding: f.rem(20) var(--body-padding);
+      padding: f.rem(30) var(--body-padding);
     }
     ::marker {
       color: var(--primary);
@@ -55,7 +55,7 @@ ol {
 
   pre {
     box-shadow: none;
-    margin-block: f.rem(20) !important;
+    margin-block: f.rem(24);
   }
 
   code:not([class^="language-"]) {
@@ -64,32 +64,38 @@ ol {
     border-radius: f.rem(2);
     background-color: var(--dark-grey);
     padding-inline: f.rem(3);
+    margin: f.rem(3);
     // transform: translateY(-2px);
   }
 
   &__title {
     color: var(--white);
-    margin-bottom: f.rem(20);
-    @include b.breakpoint(md) {
-      margin-bottom: f.rem(30);
-    }
+    // margin-bottom: f.rem(30);
+    // @include b.breakpoint(md) {
+    //   margin-bottom: f.rem(40);
+    // }
+
+    margin-bottom: f.rem(32);
   }
 
   &__subtitle {
-    margin-block: f.rem(20);
-    @include b.breakpoint(md) {
-      margin-block: f.rem(30);
-    }
+    // margin-block: f.rem(25);
+    // @include b.breakpoint(md) {
+    //   margin-block: f.rem(30);
+    // }
+    margin-block: f.rem(56) f.rem(32);
   }
 
   &__ultra__subtitle {
     display: inline-block;
     font-weight: 600;
 
-    margin-block: f.rem(20);
-    @include b.breakpoint(md) {
-      margin-block: f.rem(30);
-    }
+    // margin-block: f.rem(20);
+    // @include b.breakpoint(md) {
+    //   margin-block: f.rem(30);
+    // }
+
+    margin-block: f.rem(56) f.rem(32);
   }
 
   @include b.breakpoint(#{f.rem(1024)}, max-width) {
@@ -102,7 +108,7 @@ ol {
     gap: f.rem(30);
 
     > * {
-      padding-block-start: f.rem(44);
+      padding-block-start: var(--docs-section-padding-block-start);
     }
   }
 }
@@ -167,7 +173,7 @@ ol {
     color: var(--white);
   }
 
-  li:not(:last-child) {
+  a:not(:last-child) > li {
     margin-bottom: var(--gap);
   }
 

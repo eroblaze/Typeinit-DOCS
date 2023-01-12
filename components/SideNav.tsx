@@ -1,6 +1,33 @@
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
+
+import Link from "next/link";
+import { useRouter } from "next/router";
+
+export const LINKS = {
+  playground: "playground",
+  gettingStarted: "getting-started",
+  basicFeatures: "basic-features",
+  configurationBasics: "configuration-basics",
+  configurationOptions: "configuration-options",
+  hardCodedInHtml: "hard-coded-in-html",
+  callbackMethods: "callback-methods",
+  instanceMethods: "instance-methods",
+  type: "type",
+  delete: "delete",
+  deleteAll: "deleteAll",
+  pause: "pause",
+  newLine: "newLine",
+  reset: "reset",
+  play: "play",
+};
 
 const SideNav = () => {
+  const router = useRouter();
+  const { asPath, pathname } = router;
+
+  let pathFragment = asPath.substring(pathname.length);
+  pathFragment = pathFragment.length >= 1 ? pathFragment.slice(1) : "";
+
   const stickySidenavRef = useRef<HTMLElement>(null);
   const menuArrowRef: React.RefObject<SVGSVGElement> =
     useRef<SVGSVGElement>(null);
@@ -39,12 +66,27 @@ const SideNav = () => {
 
         <div className="sidenav__menu">
           <ul>
-            <li className="clickable">
-              <span className="sidenav__space">Getting Started</span>
-            </li>
+            <Link
+              href={`/docs/${LINKS.gettingStarted}`}
+              className={
+                pathname === `/docs/${LINKS.gettingStarted}`
+                  ? "active-sidebar-link"
+                  : ""
+              }
+            >
+              <li>
+                <span className="sidenav__space">Getting Started</span>
+              </li>
+            </Link>
           </ul>
           <details open>
-            <summary className="clickable">
+            <summary
+              className={
+                pathname === `/docs/${LINKS.basicFeatures}`
+                  ? "clickable active-sidebar-link"
+                  : "clickable"
+              }
+            >
               <svg
                 width="12"
                 height="8"
@@ -63,17 +105,59 @@ const SideNav = () => {
             </summary>
             <nav>
               <ul>
-                <li>Configuration basics</li>
-                <li>Configuration options</li>
-                <li>Initialization</li>
-                <li>Hard-coded in HTML</li>
-                <li>Callback methods</li>
+                <Link
+                  href={`/docs/${LINKS.basicFeatures}#${LINKS.configurationBasics}`}
+                  className={
+                    pathFragment === `${LINKS.configurationBasics}`
+                      ? "active-sidebar-link"
+                      : ""
+                  }
+                >
+                  <li>Configuration basics</li>
+                </Link>
+
+                <Link
+                  href={`/docs/${LINKS.basicFeatures}#${LINKS.configurationOptions}`}
+                  className={
+                    pathFragment === `${LINKS.configurationOptions}`
+                      ? "active-sidebar-link"
+                      : ""
+                  }
+                >
+                  <li>Configuration options</li>
+                </Link>
+                <Link
+                  href={`/docs/${LINKS.basicFeatures}#${LINKS.hardCodedInHtml}`}
+                  className={
+                    pathFragment === `${LINKS.hardCodedInHtml}`
+                      ? "active-sidebar-link"
+                      : ""
+                  }
+                >
+                  <li>Hard-coded in HTML</li>
+                </Link>
+                <Link
+                  href={`/docs/${LINKS.basicFeatures}#${LINKS.callbackMethods}`}
+                  className={
+                    pathFragment === `${LINKS.callbackMethods}`
+                      ? "active-sidebar-link"
+                      : ""
+                  }
+                >
+                  <li>Callback methods</li>
+                </Link>
               </ul>
             </nav>
           </details>
 
           <details open>
-            <summary className="clickable">
+            <summary
+              className={
+                pathname === `/docs/${LINKS.instanceMethods}`
+                  ? "clickable active-sidebar-link"
+                  : "clickable"
+              }
+            >
               <svg
                 width="12"
                 height="8"
@@ -92,13 +176,76 @@ const SideNav = () => {
             </summary>
             <nav>
               <ul>
-                <li>.type()</li>
-                <li>.delete()</li>
-                <li>.deleteAll()</li>
-                <li>.pause()</li>
-                <li>.newLine()</li>
-                <li>.reset()</li>
-                <li>.play()</li>
+                <Link
+                  href={`/docs/${LINKS.instanceMethods}#${LINKS.type}`}
+                  className={
+                    pathFragment === `${LINKS.type}`
+                      ? "active-sidebar-link"
+                      : ""
+                  }
+                >
+                  <li>.type()</li>
+                </Link>
+                <Link
+                  href={`/docs/${LINKS.instanceMethods}#${LINKS.delete}`}
+                  className={
+                    pathFragment === `${LINKS.delete}`
+                      ? "active-sidebar-link"
+                      : ""
+                  }
+                >
+                  <li>.delete()</li>
+                </Link>
+                <Link
+                  href={`/docs/${LINKS.instanceMethods}#${LINKS.deleteAll}`}
+                  className={
+                    pathFragment === `${LINKS.deleteAll}`
+                      ? "active-sidebar-link"
+                      : ""
+                  }
+                >
+                  <li>.deleteAll()</li>
+                </Link>
+                <Link
+                  href={`/docs/${LINKS.instanceMethods}#${LINKS.pause}`}
+                  className={
+                    pathFragment === `${LINKS.pause}`
+                      ? "active-sidebar-link"
+                      : ""
+                  }
+                >
+                  <li>.pause()</li>
+                </Link>
+                <Link
+                  href={`/docs/${LINKS.instanceMethods}#${LINKS.newLine}`}
+                  className={
+                    pathFragment === `${LINKS.newLine}`
+                      ? "active-sidebar-link"
+                      : ""
+                  }
+                >
+                  <li>.newLine()</li>
+                </Link>
+                <Link
+                  href={`/docs/${LINKS.instanceMethods}#${LINKS.reset}`}
+                  className={
+                    pathFragment === `${LINKS.reset}`
+                      ? "active-sidebar-link"
+                      : ""
+                  }
+                >
+                  <li>.reset()</li>
+                </Link>
+                <Link
+                  href={`/docs/${LINKS.instanceMethods}#${LINKS.play}`}
+                  className={
+                    pathFragment === `${LINKS.play}`
+                      ? "active-sidebar-link"
+                      : ""
+                  }
+                >
+                  <li>.play()</li>
+                </Link>
               </ul>
             </nav>
           </details>

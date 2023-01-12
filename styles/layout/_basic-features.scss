@@ -1,0 +1,11 @@
+@use "../abstracts/functions" as f;
+@use "../abstracts/breakpoints" as b;
+
+.basic-features {
+  // .overflow-auto {
+  //   overflow: auto;
+  //   @include b.breakpoint(#{f.rem(420)}, max-width) {
+  //     width: calc(100vw - (var(--body-padding) * 2));
+  //   }
+  // }
+}

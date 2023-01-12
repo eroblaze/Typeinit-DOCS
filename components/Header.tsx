@@ -1,9 +1,15 @@
 import { useRef, useEffect } from "react";
 import gsap from "gsap";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { LINKS } from "./SideNav";
 
 let clicked = false;
 
 const Header = () => {
+  const router = useRouter();
+  const { asPath } = router;
+
   const hamburgerRef = useRef<HTMLButtonElement>(null);
   const menuTlRef = useRef<gsap.core.Timeline>();
   const menuRef = useRef<HTMLUListElement>(null);
@@ -58,7 +64,9 @@ const Header = () => {
       <header>
         <nav className="container header">
           <p className="header__logo" aria-label="Logo">
-            typeinit<span></span>
+            <Link href="/">
+              typeinit<span></span>
+            </Link>
           </p>
           <ul
             ref={menuRef}
@@ -67,13 +75,27 @@ const Header = () => {
             id="header__nav"
           >
             <li>
-              <a href="javascript:;">Github</a>
+              <Link href="https://github.com/eroblaze/typeinit" target="_blank">
+                Github
+              </Link>
             </li>
             <li>
-              <a href="javascript:;">Docs</a>
+              <Link
+                href={`/docs/${LINKS.gettingStarted}`}
+                className={asPath.startsWith("/docs") ? "active-nav-link" : ""}
+              >
+                Docs
+              </Link>
             </li>
             <li>
-              <a href="javascript:;">Playground</a>
+              <Link
+                href={`/${LINKS.playground}`}
+                className={
+                  asPath.startsWith("/playground") ? "active-nav-link" : ""
+                }
+              >
+                Playground
+              </Link>
             </li>
           </ul>
 
