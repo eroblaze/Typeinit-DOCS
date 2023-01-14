@@ -135,138 +135,139 @@ const Body = () => {
   };
 
   return (
-    <main className="container body">
-      <Head>
-        <title>Typeinit</title>
-      </Head>
+    <div className="body">
+      <main className="container">
+        <Head>
+          <title>Typeinit</title>
+        </Head>
 
-      <section className="hero">
-        <p className="h1 hero__background" aria-hidden="true">
-          typeinit
-        </p>
-        <h1 className="h2 hero__text">
-          An Intuitive <br />
-          Javascript <br className="br-on-md" />
-          Typing <br />
-          Animation Library.
-        </h1>
-        <div className="hero__btns">
-          <Link href="/docs/getting-started">
-            <button className="btn btn--primary">view docs</button>
-          </Link>
-          <Link href="https://github.com/eroblaze/typeinit" target="_blank">
-            <button className="btn btn--gradient">github</button>
-          </Link>
-        </div>
-      </section>
-
-      <section className="main__section">
-        <section className="cards" aria-details="#why-typeinit">
-          <p className="sr-only" id="why-typeinit">
-            Why Typeinit?
+        <section className="hero">
+          <p className="h1 hero__background" aria-hidden="true">
+            typeinit
           </p>
-
-          <Fade direction="up" triggerOnce={true}>
-            <div className="cards__card">
-              <div className="cards__title">
-                <Image
-                  src="/icons/easy-to-use.svg"
-                  width={23}
-                  height={23}
-                  alt="Easy to use"
-                />
-                <p className="h4">Easy to use</p>
-              </div>
-              <p className="cards__text">
-                Offers an intuitive and chainable API for ease of use.
-              </p>
-            </div>
-          </Fade>
-          <Fade direction="up" triggerOnce={true}>
-            <div className="cards__card">
-              <div className="cards__title">
-                <Image
-                  src="/icons/flexible.svg"
-                  width={23}
-                  height={23}
-                  alt="Flexible"
-                />
-                <p className="h4">Flexible</p>
-              </div>
-              <p className="cards__text">
-                Customize and adjust the default settings as you wish.
-              </p>
-            </div>
-          </Fade>
-          <Fade direction="up" triggerOnce={true}>
-            <div className="cards__card">
-              <div className="cards__title">
-                <Image
-                  src="/icons/seo-friendly.svg"
-                  width={23}
-                  height={23}
-                  alt="SEO-friendly"
-                />
-                <p className="h4">SEO-friendly</p>
-              </div>
-              <p className="cards__text">
-                Define strings to type directly in the HTML.
-              </p>
-            </div>
-          </Fade>
+          <h1 className="h2 hero__text">
+            An Intuitive <br />
+            Javascript <br className="br-on-md" />
+            Typing <br />
+            Animation Library.
+          </h1>
+          <div className="hero__btns">
+            <Link href="/docs/getting-started">
+              <button className="btn btn--primary">view docs</button>
+            </Link>
+            <Link href="https://github.com/eroblaze/typeinit" target="_blank">
+              <button className="btn btn--gradient">github</button>
+            </Link>
+          </div>
         </section>
 
-        <section className="display" aria-details="#display">
-          <p className="sr-only" id="display">
-            Most popular features of Typeinit
-          </p>
+        <section className="main__section">
+          <section className="cards" aria-details="#why-typeinit">
+            <p className="sr-only" id="why-typeinit">
+              Why Typeinit?
+            </p>
 
-          <div className="display__div">
-            <Fade direction="left" triggerOnce={true}>
-              <p className="h3 display__text">
-                Create an animation <br />
-                with just three lines of <br />
-                code
-              </p>
+            <Fade direction="up" triggerOnce={true}>
+              <div className="cards__card">
+                <div className="cards__title">
+                  <Image
+                    src="/icons/easy-to-use.svg"
+                    width={23}
+                    height={23}
+                    alt="Easy to use"
+                  />
+                  <p className="h4">Easy to use</p>
+                </div>
+                <p className="cards__text">
+                  Offers an intuitive and chainable API for ease of use.
+                </p>
+              </div>
             </Fade>
+            <Fade direction="up" triggerOnce={true}>
+              <div className="cards__card">
+                <div className="cards__title">
+                  <Image
+                    src="/icons/flexible.svg"
+                    width={23}
+                    height={23}
+                    alt="Flexible"
+                  />
+                  <p className="h4">Flexible</p>
+                </div>
+                <p className="cards__text">
+                  Customize and adjust the default settings as you wish.
+                </p>
+              </div>
+            </Fade>
+            <Fade direction="up" triggerOnce={true}>
+              <div className="cards__card">
+                <div className="cards__title">
+                  <Image
+                    src="/icons/seo-friendly.svg"
+                    width={23}
+                    height={23}
+                    alt="SEO-friendly"
+                  />
+                  <p className="h4">SEO-friendly</p>
+                </div>
+                <p className="cards__text">
+                  Define strings to type directly in the HTML.
+                </p>
+              </div>
+            </Fade>
+          </section>
 
-            <Fade direction="right" triggerOnce={true}>
-              <div className="display__box">
-                <div className="display__container__one">
-                  {/* prettier-ignore */}
-                  <pre className="scrollbar display__box__rect language-javascript">
+          <section className="display" aria-details="#display">
+            <p className="sr-only" id="display">
+              Most popular features of Typeinit
+            </p>
+
+            <div className="display__div">
+              <Fade direction="left" triggerOnce={true}>
+                <p className="h3 display__text">
+                  Create an animation <br />
+                  with just three lines of <br />
+                  code
+                </p>
+              </Fade>
+
+              <Fade direction="right" triggerOnce={true}>
+                <div className="display__box">
+                  <div className="display__container__one">
+                    {/* prettier-ignore */}
+                    <pre className="scrollbar display__box__rect language-javascript">
                 <code className="language-javascript">
                  {`new Typeinit(".element")
   .type("Hello World!")
   .play()`}
                 </code>
               </pre>
+                  </div>
+
+                  <button
+                    className="btn btn--secondary"
+                    onClick={(e) => handleRunBtn(e, 1)}
+                  >
+                    Run
+                  </button>
                 </div>
+              </Fade>
+            </div>
 
-                <button
-                  className="btn btn--secondary"
-                  onClick={(e) => handleRunBtn(e, 1)}
-                >
-                  Run
-                </button>
-              </div>
-            </Fade>
-          </div>
+            <div className="display__div">
+              <Fade direction="right" triggerOnce={true}>
+                <p className="h3 display__text">
+                  Combine with your <br />
+                  favourite JavaScript <br />
+                  animation library
+                </p>
+              </Fade>
 
-          <div className="display__div">
-            <Fade direction="right" triggerOnce={true}>
-              <p className="h3 display__text">
-                Combine with your <br />
-                favourite JavaScript <br />
-                animation library
-              </p>
-            </Fade>
-
-            <Fade direction="left" triggerOnce={true}>
-              <div className="display__box">
-                <div className="display__container__two">
-                  {/* prettier-ignore */}
-                  <pre className="scrollbar display__box__rect language-javascript display__box__rect--secondary">
+              <Fade direction="left" triggerOnce={true}>
+                <div className="display__box">
+                  <div className="display__container__two">
+                    {/* prettier-ignore */}
+                    <pre className="scrollbar display__box__rect language-javascript display__box__rect--secondary">
                 <code className="language-javascript">
                  {`new Typeinit(".element", {
       onCharTyped: () => {
@@ -276,31 +277,31 @@ const Body = () => {
   .play()`}
                 </code>
               </pre>
+                  </div>
+
+                  <button
+                    className="btn btn--secondary"
+                    onClick={(e) => handleRunBtn(e, 2)}
+                  >
+                    Run
+                  </button>
                 </div>
+              </Fade>
+            </div>
 
-                <button
-                  className="btn btn--secondary"
-                  onClick={(e) => handleRunBtn(e, 2)}
-                >
-                  Run
-                </button>
-              </div>
-            </Fade>
-          </div>
-
-          <div className="display__div">
-            <Fade direction="left" triggerOnce={true}>
-              <p className="h3 display__text">
-                Define the strings to <br />
-                type directly in your <br />
-                html
-              </p>
-            </Fade>
-            <Fade direction="right" triggerOnce={true}>
-              <div className="display__box">
-                <div className="display__container__three">
-                  {/* prettier-ignore */}
-                  <pre className="scrollbar display__box__rect language-html">
+            <div className="display__div">
+              <Fade direction="left" triggerOnce={true}>
+                <p className="h3 display__text">
+                  Define the strings to <br />
+                  type directly in your <br />
+                  html
+                </p>
+              </Fade>
+              <Fade direction="right" triggerOnce={true}>
+                <div className="display__box">
+                  <div className="display__container__three">
+                    {/* prettier-ignore */}
+                    <pre className="scrollbar display__box__rect language-html">
                 <code className="language-html">
                  {`<!-- html -->
 <div id="element">Foo Bar Baz</div>
@@ -312,20 +313,21 @@ const Body = () => {
 </script>`}
                 </code>
               </pre>
-                </div>
+                  </div>
 
-                <button
-                  className="btn btn--secondary"
-                  onClick={(e) => handleRunBtn(e, 3)}
-                >
-                  Run
-                </button>
-              </div>
-            </Fade>
-          </div>
+                  <button
+                    className="btn btn--secondary"
+                    onClick={(e) => handleRunBtn(e, 3)}
+                  >
+                    Run
+                  </button>
+                </div>
+              </Fade>
+            </div>
+          </section>
         </section>
-      </section>
-    </main>
+      </main>
+    </div>
   );
 };
 

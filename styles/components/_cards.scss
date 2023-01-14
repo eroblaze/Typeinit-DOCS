@@ -2,8 +2,7 @@
 @use "../abstracts/breakpoints" as b;
 
 .body {
-  // margin-block-end: var(--margin);
-  // border: 1px solid blue;
+  overflow: hidden;
 }
 
 .main__section {
