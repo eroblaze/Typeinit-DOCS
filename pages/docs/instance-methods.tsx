@@ -308,7 +308,24 @@ new Typeinit(".element", {
               </pre>
           </div>
 
-          <p>Resets a Typeinit instance to a brand new state.</p>
+          <p>Resets the Target element and destroys the Typeinit instance.</p>
+        </div>
+
+        <div className="instance-method-restart">
+          <h2 className="h3 docs__subtitle" id="restart">
+            .restart()
+          </h2>
+
+          <div className="d-grid">
+            {/* prettier-ignore */}
+            <pre className="scrollbar display__box__rect language-javascript rm-margin-top">
+                <code className="language-javascript">
+                 {`.restart(): void`}
+                </code>
+              </pre>
+          </div>
+
+          <p>Restarts the typing animation.</p>
         </div>
 
         <div className="instance-method-play">

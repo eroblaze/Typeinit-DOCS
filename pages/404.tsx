@@ -4,14 +4,11 @@ import Head from "next/head";
 
 import Typeinit from "typeinit";
 
-// let render = 0;
-
 const CustomError = () => {
   const firstRef = useRef<Typeinit>();
   const secondRef = useRef<Typeinit>();
 
   useEffect(() => {
-    // if (render === 1) {
     secondRef.current = new Typeinit(".error__writings__container>h2", {
       caret: false,
     });
@@ -19,14 +16,16 @@ const CustomError = () => {
     firstRef.current = new Typeinit(".error__writings__container>h1", {
       caret: false,
       onEnd: () => {
-        if (secondRef.current) {
-          secondRef.current.reset();
-        }
+        secondRef.current?.play();
       },
     });
 
     firstRef.current.play();
-    // } else render += 1;
+
+    return () => {
+      firstRef.current?.reset();
+      secondRef.current?.reset();
+    };
   }, []);
 
   return (

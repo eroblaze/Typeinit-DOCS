@@ -61,7 +61,7 @@
 
     gap: f.rem(20);
 
-    @include b.breakpoint(600px, max-width) {
+    @include b.breakpoint(md, max-width) {
       grid-auto-flow: row !important;
       align-items: flex-start;
       gap: f.rem(50);
@@ -70,10 +70,10 @@
 
   &__div:nth-of-type(2) {
     div:first-of-type {
-      @include b.breakpoint(601px) {
+      @include b.breakpoint(md) {
         grid-column: 2 / 3;
       }
-      @include b.breakpoint(600px) {
+      @include b.breakpoint(md) {
         p {
           text-align: end;
         }
@@ -89,7 +89,9 @@
   }
   &__box {
     width: 100%;
-    max-width: f.rem(480);
+    @include b.breakpoint(md) {
+      max-width: f.rem(480);
+    }
 
     > button {
       margin-top: f.rem(44);

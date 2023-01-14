@@ -58,7 +58,7 @@ const Body = () => {
           y: 0,
           opacity: 1,
         });
-        target.textContent = "Reset";
+        target.textContent = "Restart";
 
         firstDisplayTypeinitRef.current = new Typeinit(`.${theClass}`, {
           startDelay: 300,
@@ -82,7 +82,7 @@ const Body = () => {
           y: 0,
           opacity: 1,
         });
-        target.textContent = "Reset";
+        target.textContent = "Restart";
 
         secondDisplayTypeinitRef.current = new Typeinit(`.${theClass}>div`, {
           startDelay: 300,
@@ -111,7 +111,7 @@ const Body = () => {
           y: 0,
           opacity: 1,
         });
-        target.textContent = "Reset";
+        target.textContent = "Restart";
 
         thirdDisplayTypeinitRef.current = new Typeinit(`.${theClass}`, {
           startDelay: 300,
@@ -119,16 +119,16 @@ const Body = () => {
         });
         thirdDisplayTypeinitRef.current.play();
       }
-    } else if (textContent === "Reset") {
+    } else if (textContent === "Restart") {
       if (whichToDisplay === 1) {
         if (firstDisplayTypeinitRef.current)
-          firstDisplayTypeinitRef.current.reset();
+          firstDisplayTypeinitRef.current.restart();
       } else if (whichToDisplay === 2) {
         if (secondDisplayTypeinitRef.current)
-          secondDisplayTypeinitRef.current.reset();
+          secondDisplayTypeinitRef.current.restart();
       } else if (whichToDisplay === 3) {
         if (thirdDisplayTypeinitRef.current) {
-          thirdDisplayTypeinitRef.current.reset();
+          thirdDisplayTypeinitRef.current.restart();
         }
       }
     }

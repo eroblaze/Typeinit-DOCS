@@ -38,7 +38,7 @@ const GettingStarted = () => {
               {/* prettier-ignore */}
               <pre className="scrollbar display__box__rect language-html">
                 <code className="language-html">
-                 {`<script src="https://cdn.jsdelivr.net/npm/typeinit@1.2.7/dist/index.umd.js"></script>`}
+                 {`<script src="https://cdn.jsdelivr.net/npm/typeinit@1.3.1/dist/index.umd.js"></script>`}
                 </code>
               </pre>
             </div>
@@ -132,7 +132,7 @@ new Typeinit(".element")
     <div class="element"></div>
 
     <!-- Typeinit CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/typeinit@1.2.7/dist/index.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typeinit@1.3.1/dist/index.umd.js"></script>
     <script>
       let typeinit = new Typeinit(".element");
       typeinit

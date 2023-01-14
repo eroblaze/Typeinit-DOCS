@@ -18,6 +18,7 @@ export const LINKS = {
   pause: "pause",
   newLine: "newLine",
   reset: "reset",
+  restart: "restart",
   play: "play",
 };
 
@@ -235,6 +236,16 @@ const SideNav = () => {
                   }
                 >
                   <li>.reset()</li>
+                </Link>
+                <Link
+                  href={`/docs/${LINKS.instanceMethods}#${LINKS.restart}`}
+                  className={
+                    pathFragment === `${LINKS.restart}`
+                      ? "active-sidebar-link"
+                      : ""
+                  }
+                >
+                  <li>.restart()</li>
                 </Link>
                 <Link
                   href={`/docs/${LINKS.instanceMethods}#${LINKS.play}`}
