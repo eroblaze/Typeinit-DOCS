@@ -57,6 +57,7 @@ header {
       }
     }
     @include b.breakpoint(md, max-width) {
+      display: none;
       position: fixed;
       flex-direction: column;
       align-items: center;
@@ -67,8 +68,6 @@ header {
       left: 10%;
       min-height: 100vh;
       backdrop-filter: saturate(180%) blur(5px);
-      transform: translateX(100vw);
-      transition: transform 150ms linear;
 
       a {
         font-size: f.rem(16);
@@ -112,12 +111,12 @@ header {
 
 .slide-in {
   @include b.breakpoint(md, max-width) {
-    transform: translateX(0);
+    display: flex;
   }
 }
 
 .slide-out {
   @include b.breakpoint(md, max-width) {
-    transform: translateX(100vw);
+    display: none;
   }
 }

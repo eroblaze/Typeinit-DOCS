@@ -47,9 +47,6 @@ body {
   min-height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  // grid-template-rows: 1fr auto; // Because of the fixed position of the header
-  overflow: clip;
-  // overflow: hidden;
 }
 
 table {

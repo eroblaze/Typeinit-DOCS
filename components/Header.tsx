@@ -42,7 +42,7 @@ const Header = () => {
   const handleMenuClicked = () => {
     switch (clicked) {
       case false:
-        menuTlRef.current?.timeScale(4).play();
+        menuTlRef.current?.timeScale(8).play();
         if (menuRef.current) {
           menuRef.current.classList.remove("slide-out");
           menuRef.current.classList.add("slide-in");
