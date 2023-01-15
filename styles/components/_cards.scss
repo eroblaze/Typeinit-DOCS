@@ -3,6 +3,11 @@
 
 .body {
   overflow: hidden;
+  padding-block-end: var(--margin);
+}
+
+.body + footer {
+  margin-block-start: 0;
 }
 
 .main__section {

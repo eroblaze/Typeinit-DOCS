@@ -17,8 +17,9 @@ const InstanceMethods = () => {
         <div className="instance-methods-introduction">
           <p>
             These methods are the <i>bread and butter</i> of the animation. They
-            all return the instance with the exception of <code>.reset()</code>{" "}
-            and <code>.play()</code> which kicks off the typing animation
+            all return the instance with the exception of <code>.reset()</code>,{" "}
+            <code>.restart()</code> and <code>.play()</code> which kicks off the
+            typing animation
           </p>
           <p className="warning rm-margin-bottom mt-24">
             <span className="warning__title">Note</span>
