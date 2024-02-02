@@ -1,7 +1,14 @@
 import Image from "next/image";
-import React from "react";
+import React, { useRef, useEffect } from "react";
 
 const Footer = () => {
+  const dateRef = useRef<HTMLParagraphElement | null>(null);
+  useEffect(() => {
+    let element: HTMLParagraphElement | null = dateRef.current;
+    if (element) {
+      element.innerText = String(new Date().getFullYear());
+    }
+  }, []);
   return (
     <footer className="container small">
       <span>
@@ -11,7 +18,7 @@ const Footer = () => {
           height={18}
           alt="Copyright icon"
         ></Image>
-        <p>2023</p>
+        <p ref={dateRef}></p>
       </span>
       <div aria-hidden="true"></div>
       <p>designed & created by Paul Eboselume</p>
