@@ -27,7 +27,6 @@ const Body = () => {
   const firstDisplayTypeinitRef = useRef<Typeinit | null>(null);
   const secondDisplayTypeinitRef = useRef<Typeinit | null>(null);
   const thirdDisplayTypeinitRef = useRef<Typeinit | null>(null);
-  const gsapTl = useRef<GSAPTimeline | null>(null);
 
   useEffect(() => {
     Prism.highlightAll();
@@ -40,7 +39,7 @@ const Body = () => {
 
   const handleRunBtn = (
     e: MouseEvent<HTMLButtonElement, globalThis.MouseEvent>,
-    whichToDisplay: number
+    whichToDisplay: number,
   ) => {
     const target = e.target as HTMLButtonElement;
     const { textContent } = target;

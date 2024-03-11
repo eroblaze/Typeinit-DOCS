@@ -10,11 +10,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <link
-          rel="shortcut icon"
-          href="/typeinit-logo.ico"
-          type="image/x-icon"
-        />
+        <link rel="shortcut icon" href="/typeinit-logo.ico" type="image/x-icon" />
       </Head>
       <Layout>
         <Component {...pageProps} />

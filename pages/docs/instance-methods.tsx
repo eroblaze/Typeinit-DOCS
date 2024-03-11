@@ -16,15 +16,13 @@ const InstanceMethods = () => {
 
         <div className="instance-methods-introduction">
           <p>
-            These methods are the <i>bread and butter</i> of the animation. They
-            all return the instance with the exception of <code>.reset()</code>,{" "}
-            <code>.restart()</code> and <code>.play()</code> which kicks off the
-            typing animation
+            These methods are the <i>bread and butter</i> of the animation. They all return the
+            instance with the exception of <code>.reset()</code>, <code>.restart()</code> and{" "}
+            <code>.play()</code> which kicks off the typing animation
           </p>
           <p className="warning rm-margin-bottom mt-24">
             <span className="warning__title">Note</span>
-            These methods must be called before the <code>.play()</code> method
-            is invoked.
+            These methods must be called before the <code>.play()</code> method is invoked.
           </p>
           <div className="d-grid">
             {/* prettier-ignore */}
@@ -89,16 +87,11 @@ new Typeinit(".element", {
           <ul className="mt-10">
             <li className="mb-10">
               <code>numToDel</code>
-              <span>
-                : The number of characters or words to delete. Defaults to 1.
-              </span>
+              <span>: The number of characters or words to delete. Defaults to 1.</span>
             </li>
             <li className="mb-10">
               <code>deleteOptions</code>
-              <span>
-                : An object containing quick options on how the deleting should
-                go about.
-              </span>
+              <span>: An object containing quick options on how the deleting should go about.</span>
 
               <div className="overflow-auto mt-24">
                 <table>
@@ -116,10 +109,9 @@ new Typeinit(".element", {
                         <code>delay: deleteDelay</code>
                       </td>
                       <td>
-                        <code>number</code> The number (in milliseconds) to wait
-                        before deleting. Defaults to <code>deleteDelay</code> in{" "}
-                        <code>optionsObj</code> passed to Typeinit's
-                        constructor.
+                        <code>number</code> The number (in milliseconds) to wait before deleting.
+                        Defaults to <code>deleteDelay</code> in <code>optionsObj</code> passed to
+                        Typeinit's constructor.
                       </td>
                     </tr>
                     <tr>
@@ -128,8 +120,8 @@ new Typeinit(".element", {
                         <code>mode: "char"</code>
                       </td>
                       <td>
-                        <code>"char" | "word"</code> Sets the mode by which
-                        Typeinit should delete.
+                        <code>"char" | "c" | "word" | "w"</code> Sets the mode by which Typeinit
+                        should delete.
                       </td>
                     </tr>
 
@@ -139,9 +131,8 @@ new Typeinit(".element", {
                         <code>speed: deletingSpeed</code>
                       </td>
                       <td>
-                        <code>number</code> Sets the speed of the deletion.
-                        Defaults to <code>deletingSpeed</code> in{" "}
-                        <code>optionsObj</code> passed to Typeinit's
+                        <code>number</code> Sets the speed of the deletion. Defaults to{" "}
+                        <code>deletingSpeed</code> in <code>optionsObj</code> passed to Typeinit's
                         constructor.
                       </td>
                     </tr>
@@ -189,16 +180,13 @@ new Typeinit(".element", {
             <li className="mb-10">
               <code>ease</code>
               <span>
-                : If set to <code>true</code>, an effect will be applied while
-                deleting. Defaults to <code>false</code>.
+                : If set to <code>true</code>, an effect will be applied while deleting. Defaults to{" "}
+                <code>false</code>.
               </span>
             </li>
             <li className="mb-10">
               <code>deleteAllOptions</code>
-              <span>
-                : An object containing quick options on how the deleting should
-                go about.
-              </span>
+              <span>: An object containing quick options on how the deleting should go about.</span>
 
               <div className="overflow-auto mt-24">
                 <table>
@@ -216,10 +204,9 @@ new Typeinit(".element", {
                         <code>delay: deleteDelay</code>
                       </td>
                       <td>
-                        <code>number</code> The number (in milliseconds) to wait
-                        before deleting. Defaults to <code>deleteDelay</code> in{" "}
-                        <code>optionsObj</code> passed to Typeinit's
-                        constructor.
+                        <code>number</code> The number (in milliseconds) to wait before deleting.
+                        Defaults to <code>deleteDelay</code> in <code>optionsObj</code> passed to
+                        Typeinit's constructor.
                       </td>
                     </tr>
 
@@ -229,9 +216,8 @@ new Typeinit(".element", {
                         <code>speed: deletingSpeed</code>
                       </td>
                       <td>
-                        <code>number</code> Sets the speed of the deletion.
-                        Defaults to <code>deletingSpeed</code> in{" "}
-                        <code>optionsObj</code> passed to Typeinit's
+                        <code>number</code> Sets the speed of the deletion. Defaults to{" "}
+                        <code>deletingSpeed</code> in <code>optionsObj</code> passed to Typeinit's
                         constructor.
                       </td>
                     </tr>
@@ -272,9 +258,8 @@ new Typeinit(".element", {
           </div>
 
           <p>
-            Pauses the animation for the <code>ms</code>(in milliseconds)
-            passed. Defaults to <code>pause</code> in <code>optionsObj</code>{" "}
-            passed to Typeinit's constructor.
+            Pauses the animation for the <code>ms</code>(in milliseconds) passed. Defaults to{" "}
+            <code>pause</code> in <code>optionsObj</code> passed to Typeinit's constructor.
           </p>
         </div>
 

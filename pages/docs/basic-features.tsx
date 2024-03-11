@@ -29,9 +29,8 @@ const BasicFeatures = () => {
           <li>
             <code>selector</code>
             <span>
-              : The target element where text will be typed. This can be a DOM
-              node or a CSS selector (class, ID, etc.). For example, all of the
-              examples below will work.
+              : The target element where text will be typed. This can be a DOM node or a CSS
+              selector (class, ID, etc.). For example, all of the examples below will work.
             </span>
 
             <div className="d-grid">
@@ -48,15 +47,13 @@ new Typeinit('[data-attribute="element"]', {...});`}
 
             <p className="warning">
               <span className="warning__title">Note</span>
-              If a selector that applies to several elements on the page is
-              used, only the first element found will be targeted
+              If a selector that applies to several elements on the page is used, only the first
+              element found will be targeted
             </p>
           </li>
           <li>
             <code>optionsObj</code>
-            <span>
-              : An object that customizes the behavior of the instance.
-            </span>
+            <span>: An object that customizes the behavior of the instance.</span>
           </li>
         </ul>
 
@@ -64,9 +61,8 @@ new Typeinit('[data-attribute="element"]', {...});`}
           Configuration Options
         </h2>
         <p>
-          You can customize an instance by passing an object with any of the
-          following properties as the second argument to the Typeinit's
-          constructor
+          You can customize an instance by passing an object with any of the following properties as
+          the second argument to the Typeinit's constructor
         </p>
         <div className="d-grid">
           {/* prettier-ignore */}
@@ -134,8 +130,7 @@ new Typeinit('[data-attribute="element"]', {...});`}
                   <code>pause: 1000</code>
                 </td>
                 <td>
-                  <code>number</code> The amount of time in milliseconds to
-                  pause.
+                  <code>number</code> The amount of time in milliseconds to pause.
                 </td>
               </tr>
 
@@ -145,8 +140,8 @@ new Typeinit('[data-attribute="element"]', {...});`}
                   <code>repeat: 0</code>
                 </td>
                 <td>
-                  <code>number|"infinite"</code> The number of times the
-                  animation should be repeated.
+                  <code>number|"infinite"</code> The number of times the animation should be
+                  repeated.
                 </td>
               </tr>
 
@@ -156,8 +151,8 @@ new Typeinit('[data-attribute="element"]', {...});`}
                   <code>repeatEase: false</code>
                 </td>
                 <td>
-                  <code>boolean</code> If set to <code>true</code>, applies an
-                  effect before repeating.
+                  <code>boolean</code> If set to <code>true</code>, applies an effect before
+                  repeating.
                 </td>
               </tr>
 
@@ -167,8 +162,8 @@ new Typeinit('[data-attribute="element"]', {...});`}
                   <code>repeatSpeed: 0</code>
                 </td>
                 <td>
-                  <code>number</code> The speed in milliseconds it takes to
-                  delete all characters in the element before repeating.
+                  <code>number</code> The speed in milliseconds it takes to delete all characters in
+                  the element before repeating.
                 </td>
               </tr>
               <tr>
@@ -177,8 +172,7 @@ new Typeinit('[data-attribute="element"]', {...});`}
                   <code>repeatDelay: 750</code>
                 </td>
                 <td>
-                  <code>number</code> Time before each repeat starts in
-                  milliseconds.
+                  <code>number</code> Time before each repeat starts in milliseconds.
                 </td>
               </tr>
 
@@ -207,8 +201,8 @@ new Typeinit('[data-attribute="element"]', {...});`}
                   <code>caretWidth: 1</code>
                 </td>
                 <td>
-                  <code>number</code> Styles the width of the caret. It is
-                  measured in <code>px</code> unit.
+                  <code>number</code> Styles the width of the caret. It is measured in{" "}
+                  <code>px</code> unit.
                 </td>
               </tr>
 
@@ -218,9 +212,8 @@ new Typeinit('[data-attribute="element"]', {...});`}
                   <code>waitUntilVisible: false</code>
                 </td>
                 <td>
-                  <code>boolean</code> If set to <code>true</code>, the
-                  animation will start only when the element is within the
-                  viewport.
+                  <code>boolean</code> If set to <code>true</code>, the animation will start only
+                  when the element is within the viewport.
                 </td>
               </tr>
 
@@ -230,16 +223,14 @@ new Typeinit('[data-attribute="element"]', {...});`}
                   <code>visibleOptions: "center bottom"</code>
                 </td>
                 <td>
-                  <code>string</code> Configures when the element becomes
-                  visible. Possible values are: <code>"top top"</code> |{" "}
-                  <code>"top center"</code> | <code>"top bottom"</code> |{" "}
-                  <code>"center top"</code> | <code>"center center"</code> |{" "}
-                  <code>"center bottom"</code> | <code>"bottom top"</code>|{" "}
-                  <code>"bottom center"</code> | <code>"bottom bottom"</code>.
-                  The first value is relative to the element while the second is
-                  relative to the viewport. By default, the element becomes
-                  visible when the center of the element touches the bottom of
-                  the viewport.
+                  <code>string</code> Configures when the element becomes visible. Possible values
+                  are: <code>"top top"</code> | <code>"top center"</code> |{" "}
+                  <code>"top bottom"</code> | <code>"center top"</code> |{" "}
+                  <code>"center center"</code> | <code>"center bottom"</code> |{" "}
+                  <code>"bottom top"</code>| <code>"bottom center"</code> |{" "}
+                  <code>"bottom bottom"</code>. The first value is relative to the element while the
+                  second is relative to the viewport. By default, the element becomes visible when
+                  the center of the element touches the bottom of the viewport.
                 </td>
               </tr>
             </tbody>
@@ -250,9 +241,8 @@ new Typeinit('[data-attribute="element"]', {...});`}
           Hard-Coded in HTML
         </h2>
         <p>
-          You can hard-code the text you wish to animate in your target element
-          by including it in the element. This is extremely useful for those
-          looking to optimize SEO.
+          You can hard-code the text you wish to animate in your target element by including it in
+          the element. This is extremely useful for those looking to optimize SEO.
         </p>
         <div className="d-grid">
           {/* prettier-ignore */}
@@ -265,17 +255,17 @@ new Typeinit('[data-attribute="element"]', {...});`}
 
         <p className="warning">
           <span className="warning__title">Note</span>
-          This approach may cause a flash of text before the instance is
-          started. This is because the text will already be rendered on the page
-          before Typeinit has a chance to parse it for the animation.
+          This approach may cause a flash of text before the instance is started. This is because
+          the text will already be rendered on the page before Typeinit has a chance to parse it for
+          the animation.
         </p>
 
         <h2 className="h3 docs__subtitle" id="callback-methods">
           Callback Methods
         </h2>
         <p>
-          There are methods in the optionsObj which will fire at particular
-          points in the execution of the animation.
+          There are methods in the optionsObj which will fire at particular points in the execution
+          of the animation.
         </p>
 
         <div className="d-grid">

@@ -17,9 +17,7 @@ const GettingStarted = () => {
         <h1 className="h1 docs__title">Getting Started</h1>
         <p>Welcome to the Typeinit documentation!</p>
         <h2 className="h3 docs__subtitle">Installation</h2>
-        <p className="mb-10">
-          You can get the code through one of the following means:
-        </p>
+        <p className="mb-10">You can get the code through one of the following means:</p>
         <ul>
           <li>
             <span className="mb-10">
@@ -38,7 +36,7 @@ const GettingStarted = () => {
               {/* prettier-ignore */}
               <pre className="scrollbar display__box__rect language-html">
                 <code className="language-html">
-                 {`<script src="https://cdn.jsdelivr.net/npm/typeinit@1.3.1/dist/index.umd.js"></script>`}
+                 {`<script src="https://cdn.jsdelivr.net/npm/typeinit@1.3.2/dist/index.umd.js"></script>`}
                 </code>
               </pre>
             </div>
@@ -53,8 +51,7 @@ const GettingStarted = () => {
             >
               NPM / YARN
             </Link>{" "}
-            - install with <code>npm install typeinit</code> or{" "}
-            <code>yarn add typeinit</code>.
+            - install with <code>npm install typeinit</code> or <code>yarn add typeinit</code>.
           </li>
         </ul>
 
@@ -62,13 +59,11 @@ const GettingStarted = () => {
 
         <ul>
           <li>
-            <span className="h4 docs__ultra__subtitle rm-margin-top">
-              Create a Target Element
-            </span>
+            <span className="h4 docs__ultra__subtitle rm-margin-top">Create a Target Element</span>
             <p>
-              You can target an element by tag name, class, ID, or any other CSS
-              selector. For instance, if you want to target an element with a{" "}
-              <code>.element</code> class attached to it:
+              You can target an element by tag name, class, ID, or any other CSS selector. For
+              instance, if you want to target an element with a <code>.element</code> class attached
+              to it:
             </p>
             <div className="d-grid">
               {/* prettier-ignore */}
@@ -79,9 +74,8 @@ const GettingStarted = () => {
               </pre>
             </div>
             <p>
-              If you want a fallback for users without Javascript enabled, or
-              for SEO reasons, you can put the text directly into this element,
-              (
+              If you want a fallback for users without Javascript enabled, or for SEO reasons, you
+              can put the text directly into this element, (
               <Link
                 href={`/docs/${LINKS.basicFeatures}#${LINKS.hardCodedInHtml}`}
                 className="cl-primary"
@@ -132,7 +126,7 @@ new Typeinit(".element")
     <div class="element"></div>
 
     <!-- Typeinit CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/typeinit@1.3.1/dist/index.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typeinit@1.3.2/dist/index.umd.js"></script>
     <script>
       let typeinit = new Typeinit(".element");
       typeinit

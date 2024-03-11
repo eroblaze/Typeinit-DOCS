@@ -10,14 +10,14 @@ const CustomError = () => {
 
   useEffect(() => {
     secondRef.current = new Typeinit(".error__writings__container>h2", {
-      caret: false,
+      caret: false
     });
 
     firstRef.current = new Typeinit(".error__writings__container>h1", {
       caret: false,
       onEnd: () => {
         secondRef.current?.play();
-      },
+      }
     });
 
     firstRef.current.play();

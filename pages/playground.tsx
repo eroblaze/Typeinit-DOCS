@@ -8,7 +8,7 @@ const playground = () => {
 
   useEffect(() => {
     comingSoonRef.current = new Typeinit(".playground>h1", {
-      caret: false,
+      caret: false
     });
 
     comingSoonRef.current.play();
