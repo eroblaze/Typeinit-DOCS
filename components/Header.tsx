@@ -20,21 +20,21 @@ const Header = () => {
       .to(
         [
           hamburgerRef.current?.querySelector("span:first-child"),
-          hamburgerRef.current?.querySelector("span:last-child"),
+          hamburgerRef.current?.querySelector("span:last-child")
         ],
         {
-          width: 10,
+          width: 10
         }
       )
       .to(hamburgerRef.current, { rotate: 45 })
       .to(
         [
           hamburgerRef.current?.querySelector("span:first-child"),
-          hamburgerRef.current?.querySelector("span:last-child"),
+          hamburgerRef.current?.querySelector("span:last-child")
         ],
         {
           height: 7,
-          width: 2,
+          width: 2
         }
       );
   }, []);
@@ -68,12 +68,8 @@ const Header = () => {
               typeinit<span></span>
             </Link>
           </p>
-          <ul
-            ref={menuRef}
-            role="list"
-            className="header__nav"
-            id="header__nav"
-          >
+
+          <ul ref={menuRef} role="list" className="header__nav" id="header__nav">
             <li>
               <Link href="https://github.com/eroblaze/typeinit" target="_blank">
                 Github
@@ -90,9 +86,7 @@ const Header = () => {
             <li>
               <Link
                 href={`/${LINKS.playground}`}
-                className={
-                  asPath.startsWith("/playground") ? "active-nav-link" : ""
-                }
+                className={asPath.startsWith("/playground") ? "active-nav-link" : ""}
               >
                 Playground
               </Link>

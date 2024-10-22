@@ -8,7 +8,7 @@ $breakpoints: (
   // 721px
   "lg": 60.0625em,
   // 961px
-  "xl": 75.0625em // 1201px,,,,,,
+  "xl": 75.0625em // 1201px
 );
 
 @mixin breakpoint($bp, $w: min-width) {

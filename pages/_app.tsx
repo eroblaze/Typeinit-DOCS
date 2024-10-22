@@ -10,6 +10,10 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
+        <meta
+          name="description"
+          content="A lightweight JavaScript library for creating smooth typing animations on websites. Enhance user experience with customizable, responsive, and fast-loading text animations."
+        />
         <link rel="shortcut icon" href="/typeinit-logo.ico" type="image/x-icon" />
       </Head>
       <Layout>
